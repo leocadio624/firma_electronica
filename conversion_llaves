@@ -1,0 +1,12 @@
+psw : 12345678a
+
+convierte el certificado a pem
+openssl x509 -inform der -in cacx7605101p8.cer -out public_key.pem
+
+convierte llave privada a pem
+openssl pkcs8 -inform DER -in Claveprivada_FIEL_CACX7605101P8_20190528_152826.key -out private_key.pem -passin pass:12345678a
+
+
+verifica el contenido de una llave
+openssl rsa -noout -modulus -in Claveprivada_FIEL_CACX7605101P8_20190528_152826.key
+
